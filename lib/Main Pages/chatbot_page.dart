@@ -34,7 +34,7 @@ class _ChatPageState extends State<ChatPage> {
       id: '82091008-a484-4a89-ae75-a22bf8d6f3ab', firstName: 'Assistant');
 
   Future<String> askQuestion(String message) async {
-    final url = Uri.parse('http://20.54.112.25/chatbot/ask-question');
+    final url = Uri.parse('http://20.28.67.10/chatbot/ask-question');
     final res = await http.post(
       url,
       headers: <String, String>{
@@ -72,7 +72,7 @@ class _ChatPageState extends State<ChatPage> {
       _messages.add(cureQuestion);
     });
 
-    final url = Uri.parse('http://20.54.112.25/chatbot/get-cure');
+    final url = Uri.parse('http://20.28.67.10/chatbot/get-cure');
     final res = await http.post(
       url,
       headers: <String, String>{
@@ -105,7 +105,7 @@ class _ChatPageState extends State<ChatPage> {
   }
 
   void clearHistory() async {
-    final url = Uri.parse('http://20.54.112.25/chatbot/clear-history');
+    final url = Uri.parse('http://20.28.67.10/chatbot/clear-history');
     final res = await http.post(
       url,
       headers: <String, String>{

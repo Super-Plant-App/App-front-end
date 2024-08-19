@@ -114,8 +114,8 @@ class _ScannerPageState extends State<ScannerPage>
   Future<void> uploadImage() async {
     // Select URL based on the selected option
     final url = widget.selectedOption == 'Object Detection'
-        ? Uri.parse('http://20.54.112.25/model/predict-image/')
-        : Uri.parse('http://20.54.112.25/model/segment/');
+        ? Uri.parse('http://20.28.67.10/model/predict-image/')
+        : Uri.parse('http://20.28.67.10/model/segment/');
 
     try {
       var request = http.MultipartRequest('POST', url);
